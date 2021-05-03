@@ -115,8 +115,8 @@ read.addEventListener('click', () => {
     let top = new SpeechSynthesisUtterance(top_txt.value);
     let bot = new SpeechSynthesisUtterance(bot_txt.value);
 
-    top.volume = slider.value;
-    bot.volume = slider.value;
+    top.volume = slider.value*0.01;
+    bot.volume = slider.value*0.01;
 
     var voice = dropdown.selectedOptions[0].getAttribute('data-name');
     for(var i = 0; i < voices.length; ++i) {
